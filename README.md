@@ -106,17 +106,7 @@ The system uses **classification algorithms** to predict the best crop. The data
 4. **Model Training** – Used **classification algorithms (e.g., Decision Trees, Random Forest, SVM, etc.)**  
 5. **Model Evaluation** – Compared performance using **accuracy, precision, recall, and F1-score**  
 
----
 
-## 📌 Example Predictions
-
-| **Nitrogen** | **Phosphorus** | **Potassium** | **Temperature (°C)** | **Humidity (%)** | **pH** | **Rainfall (mm)** | **Frost Risk** | **Recommended Crop** |
-|------------|------------|------------|----------------|------------|------|------------|------------|------------------|
-| 90         | 42         | 43         | 25.4           | 80.3       | 6.5  | 200        | 0          | Rice             |
-| 120        | 60         | 50         | 30.0           | 70.2       | 7.0  | 150        | 1          | Wheat            |
-| 75         | 30         | 40         | 20.5           | 60.0       | 6.8  | 100        | 0          | Maize            |
-
----
 
 ## 📸 Screenshots
 
