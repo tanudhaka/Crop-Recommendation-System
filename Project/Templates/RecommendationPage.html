@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Fasal</title>
+    <style>
+        .form-control:focus {
+  border: 1px solid green;
+  box-shadow: 0 0 5px green;
+}
+    </style>
+</head>
+
+<body style="margin: 0px; padding: 0px;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <h2 class="text-light px-2">Fasal</h2>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active px-2">
+                    <a class="nav-link text-light" href="{{ url_for('index') }}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link text-light" href="{{ url_for('contact') }}">Contact</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link text-light" href="{{ url_for('about') }}">About</a>
+                </li>
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container my-5 text-center">
+        <h2>Get The Best Recommendation !!</h2>
+    </div>
+
+    <div class="container my-5 d-flex justify-content-center">
+        <form id = "crop-form">
+                <div class="col my-4" style="width:20cm">
+                    <label for="Nitrogen">Nitrogen</label>
+                    <input type="number" id="Nitrogen" name="Nitrogen" placeholder="Enter Nitrogen" class="form-control" required step="0">
+                </div>
+                <div class="col my-4" style="width:20cm">
+                    <label for="Phosphorus">Phosphorus</label>
+                    <input type="number" id="Phosphorus" name="Phosphorus" placeholder="Enter Phosphorus" class="form-control" required step="00">
+                </div>
+                <div class="col my-4" style="width:20cm">
+                    <label for="Potassium">Potassium</label>
+                    <input type="number" id="Potassium" name="Potassium" placeholder="Enter Potassium" class="form-control" required step="0">
+                </div>
+
+                <div class="col my-4" style="width:20cm">
+                    <label for="Temperature">Temperature</label>
+                    <input type="number" step="0.01" id="Temperature" name="Temperature" placeholder="Enter Temperature in °C" class="form-control" required step="0">
+                </div>
+                <div class="col my-4" style="width:20cm">
+                    <label for="Humidity">Humidity</label>
+                    <input type="number" step="0.01" id="Humidity" name="Humidity" placeholder="Enter Humidity in %" class="form-control" required step="0">
+                </div>
+                <div class="col my-4" style="width:20cm">
+                    <label for="Ph">pH</label>
+                    <input type="number" step="0.01" id="Ph" name="Ph" placeholder="Enter pH value" class="form-control" required step="0">
+                </div>
+
+                <div class="col my-4" style="width:20cm">
+                    <label for="Rainfall">Rainfall</label>
+                    <input type="number" step="0.01" id="Rainfall" name="Rainfall" placeholder="Enter Rainfall in mm" class="form-control" required>
+                </div>
+                <div class="col my-4" style="width:20cm">
+                    <label for="Frost_risk">Frost_Risk</label>
+                    <input type="number" id="Frost_risk" name="Frost_risk" placeholder="Enter frost_risk value" class="form-control" required>
+                </div>
+
+            <div class="row mt-4">
+                <div class="col-md-12 text-center my-5">
+                    <button type="submit" class="btn btn-success" id="getRecommendationBtn">
+                        Get Recommendation
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Crop Recommendation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalResult"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Correct Script Order -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#crop-form').submit(function (e) {
+            e.preventDefault(); // Prevent page reload
+
+            var formData = $(this).serialize(); // Get form data
+
+            $.ajax({
+                type: 'POST',
+                url: '/predict',  // Flask route
+                data: formData,  // Send the form data
+                success: function (response) {
+                    console.log(response);
+                    var resultHTML = `
+                                <h2 style="text-align: center;">${response.result.name}</h2>
+                                <img src="/static/images/${response.result.image_filename}" alt="${response.result.name}" style="height: 80%; width: 80%; display: block; margin-left: auto; margin-right: auto;"/>
+                                <p style = "margin-top: 25px;"><strong>Description:</strong> ${response.result.description}</p>
+                                <p><strong>Season:</strong> ${response.result.season}</p>
+                                <p><strong>Average Yield per Hectare:</strong> ${response.result.yield}</p>
+                                <p><strong>Region:</strong> ${response.result.region}</p>
+                            `;
+                    $('#modalResult').html(resultHTML); // Display result in modal
+                    $('#resultModal').modal('show');  // Show modal
+                },
+                error: function () {
+                    alert('Error processing request!');
+                }
+            });
+        });
+    });
+</script>
+<footer class="bg-success text-white text-center py-3">
+        <p>&copy; 2024 Fasal. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

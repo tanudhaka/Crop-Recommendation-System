@@ -1,0 +1,178 @@
+{
+  "rice": {
+    "name": "Rice",
+    "description": "Rice is the seed of the grass species Oryza sativa and a staple food for much of the world's population.",
+    "season": "Summer",
+    "average_yield_per_hectare": "4.5 tons",
+    "region": "Tropical and subtropical regions",
+    "image_filename": "rice.jpg"
+  },
+  "maize": {
+    "name": "Maize",
+    "description": "Maize, also known as corn, is a cereal grain first domesticated by indigenous peoples in southern Mexico.",
+    "season": "Summer",
+    "average_yield_per_hectare": "8.0 tons",
+    "region": "Worldwide",
+    "image_filename": "maize.jpg"
+  },
+  "jute": {
+    "name": "Jute",
+    "description": "Jute is a long, soft, shiny vegetable fiber that can be spun into coarse, strong threads.",
+    "season": "Monsoon",
+    "average_yield_per_hectare": "2.5 tons",
+    "region": "Tropical regions of Asia",
+    "image_filename": "jute.jpg"
+  },
+  "cotton": {
+    "name": "Cotton",
+    "description": "Cotton is a soft, fluffy staple fiber that grows in a boll around the seeds of cotton plants.",
+    "season": "Summer",
+    "average_yield_per_hectare": "2.0 tons",
+    "region": "Tropical and subtropical regions",
+    "image_filename": "cotton.jpg"
+  },
+  "coconut": {
+    "name": "Coconut",
+    "description": "The coconut tree is a member of the palm tree family, and its fruit is widely used in food and non-food products.",
+    "season": "Year-round",
+    "average_yield_per_hectare": "8,000 nuts",
+    "region": "Tropical regions",
+    "image_filename": "coconut.jpg"
+  },
+  "papaya": {
+    "name": "Papaya",
+    "description": "Papaya is a tropical fruit, known for its sweet taste and high vitamin C content.",
+    "season": "Year-round",
+    "average_yield_per_hectare": "20 tons",
+    "region": "Tropical regions",
+    "image_filename": "papaya.jpg"
+  },
+  "orange": {
+    "name": "Orange",
+    "description": "Oranges are round citrus fruits with a tough orange skin and sweet, juicy segments inside.",
+    "season": "Winter",
+    "average_yield_per_hectare": "25 tons",
+    "region": "Subtropical and tropical regions",
+    "image_filename": "orange.jpg"
+  },
+  "apple": {
+    "name": "Apple",
+    "description": "Apples are sweet, edible fruits produced by an apple tree (Malus domestica).",
+    "season": "Autumn",
+    "average_yield_per_hectare": "15 tons",
+    "region": "Temperate regions",
+    "image_filename": "apple.jpg"
+  },
+  "muskmelon": {
+    "name": "Muskmelon",
+    "description": "Muskmelons are sweet, aromatic fruits with a soft, juicy interior and a firm, smooth skin.",
+    "season": "Summer",
+    "average_yield_per_hectare": "20 tons",
+    "region": "Tropical and subtropical regions",
+    "image_filename": "muskmelon.jpg"
+  },
+  "watermelon": {
+    "name": "Watermelon",
+    "description": "Watermelon is a large, juicy fruit with a thick rind and sweet, red flesh containing many seeds.",
+    "season": "Summer",
+    "average_yield_per_hectare": "30 tons",
+    "region": "Worldwide",
+    "image_filename": "watermelon.jpg"
+  },
+  "grapes": {
+    "name": "Grapes",
+    "description": "Grapes are small, round, smooth-skinned berries that grow in clusters and are used to make wine, juice, and raisins.",
+    "season": "Autumn",
+    "average_yield_per_hectare": "15 tons",
+    "region": "Temperate regions",
+    "image_filename": "grapes.jpg"
+  },
+  "mango": {
+    "name": "Mango",
+    "description": "Mangoes are tropical stone fruits known for their sweetness, flavor, and nutritional value.",
+    "season": "Summer",
+    "average_yield_per_hectare": "8 tons",
+    "region": "Tropical regions",
+    "image_filename": "mango.jpg"
+  },
+  "banana": {
+    "name": "Banana",
+    "description": "Bananas are long, curved fruits that grow in clusters and are a staple food in many tropical countries.",
+    "season": "Year-round",
+    "average_yield_per_hectare": "30 tons",
+    "region": "Tropical regions",
+    "image_filename": "banana.jpg"
+  },
+  "pomegranate": {
+    "name": "Pomegranate",
+    "description": "Pomegranates are a fruit known for their rich, red seeds that are packed with juice.",
+    "season": "Autumn",
+    "average_yield_per_hectare": "10 tons",
+    "region": "Subtropical regions",
+    "image_filename": "pomegranate.jpg"
+  },
+  "lentil": {
+    "name": "Lentil",
+    "description": "Lentils are small, lens-shaped legumes that are high in protein and essential nutrients.",
+    "season": "Winter",
+    "average_yield_per_hectare": "1.5 tons",
+    "region": "Temperate regions",
+    "image_filename": "lentil.jpg"
+  },
+  "blackgram": {
+    "name": "Blackgram",
+    "description": "Blackgram (Urad Dal) is a legume grown for its seeds, which are used in cooking in many cultures.",
+    "season": "Monsoon",
+    "average_yield_per_hectare": "1.0 tons",
+    "region": "Tropical regions",
+    "image_filename": "blackgram.jpg"
+  },
+  "mungbean": {
+    "name": "Mungbean",
+    "description": "Mungbean is a small green legume grown primarily for sprouting or for consumption in soups and curries.",
+    "season": "Summer",
+    "average_yield_per_hectare": "1.2 tons",
+    "region": "Tropical and subtropical regions",
+    "image_filename": "mungbeans.jpg"
+  },
+  "mothbeans": {
+    "name": "Mothbeans",
+    "description": "Mothbean is a drought-resistant legume grown primarily in arid regions.",
+    "season": "Summer",
+    "average_yield_per_hectare": "1.0 tons",
+    "region": "Arid and semi-arid regions",
+    "image_filename": "mothbeans.jpg"
+  },
+  "pigeonpeas": {
+    "name": "Pigeonpeas",
+    "description": "Pigeonpea is a drought-tolerant legume grown for its seeds, which are a source of protein.",
+    "season": "Monsoon",
+    "average_yield_per_hectare": "1.5 tons",
+    "region": "Tropical regions",
+    "image_filename": "pigeonpeas.jpg"
+  },
+  "kidneybeans": {
+    "name": "Kidneybeans",
+    "description": "Kidney beans are large, dark red legumes used in various dishes worldwide.",
+    "season": "Summer",
+    "average_yield_per_hectare": "1.8 tons",
+    "region": "Worldwide",
+    "image_filename": "kidneybeans.jpg"
+  },
+  "chickpea": {
+    "name": "Chickpea",
+    "description": "Chickpeas, also known as garbanzo beans, are small, round legumes that are high in protein.",
+    "season": "Winter",
+    "average_yield_per_hectare": "1.2 tons",
+    "region": "Temperate regions",
+    "image_filename": "chickpea.jpg"
+  },
+  "coffee": {
+    "name": "Coffee",
+    "description": "Coffee is a brewed beverage made from roasted coffee beans, known for its stimulating effect due to caffeine.",
+    "season": "Year-round",
+    "average_yield_per_hectare": "1,000 kg",
+    "region": "Tropical regions",
+    "image_filename": "coffee.jpg"
+  }
+}
