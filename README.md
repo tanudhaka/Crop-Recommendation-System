@@ -118,4 +118,13 @@ The system uses **classification algorithms** to predict the best crop. The data
 
 ---
 
-#
+## 📸 Screenshots
+
+#### 1️⃣ **Home Page**
+![Home Page](screenshots/homepage.png)
+
+#### 2️⃣ **Prediction Result Page**
+![Prediction Result](screenshots/result.png)
+
+#### 3️⃣ **User Input Form**
+![User Input](screenshots/input.png)
