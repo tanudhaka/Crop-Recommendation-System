@@ -121,10 +121,15 @@ The system uses **classification algorithms** to predict the best crop. The data
 ## 📸 Screenshots
 
 #### 1️⃣ **Home Page**
-![Home Page](screenshots/homepage.png)
+![Home Page]![Home-1](https://github.com/user-attachments/assets/70c997fa-a4a4-4577-ba3a-a959f2f3e734)
+![Home-2](https://github.com/user-attachments/assets/76524862-49f2-4e3b-8859-4485d33a8e5e)
 
-#### 2️⃣ **Prediction Result Page**
-![Prediction Result](screenshots/result.png)
 
 #### 3️⃣ **User Input Form**
-![User Input](screenshots/input.png)
+![User Input]![Input-1](https://github.com/user-attachments/assets/47a1e2af-81c5-4c69-8164-f55dfd7318bd)
+![Input-2](https://github.com/user-attachments/assets/5a8bee58-a009-408c-9ba8-e8adc79d4da5)
+
+#### 2️⃣ **Prediction Result Page**
+![Prediction Result]![Output](https://github.com/user-attachments/assets/54053d24-1889-4472-8e56-c16a7838bbd1)
+
+
